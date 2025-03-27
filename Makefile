@@ -12,3 +12,9 @@ deploy-sender:
 
 deploy-receiver:
 	@forge script script/DeployReceiver.s.sol:DeployReceiver --rpc-url $(POLYGON_RPC_URL) --account burner --sender 0xFB6a372F2F51a002b390D18693075157A459641F --broadcast --verify --etherscan-api-key ${AMOY_ETHERSCAN_API_KEY} -vvvv
+
+send-message:
+	@forge script script/SendMessage.s.sol:SendMessage --rpc-url $(SEPOLIA_RPC_URL) --account burner --sender 0xFB6a372F2F51a002b390D18693075157A459641F --broadcast -vvvv
+
+get-last-message:
+	@forge script script/GetLastMessage.s.sol:GetLastMessage --rpc-url $(POLYGON_RPC_URL) --account burner --sender 0xFB6a372F2F51a002b390D18693075157A459641F --broadcast -vvvv
